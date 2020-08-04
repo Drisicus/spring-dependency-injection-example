@@ -20,7 +20,7 @@ public class SpringDependencyInjectionExampleApplication {
         MyController controller = (MyController) context.getBean("myController");
 
         // Use bean methods
-        controller.hello();
+        System.out.println(controller.hello());
 
         System.out.println(context.getBean(PropertyInjectedController.class).sayHello());
         System.out.println(context.getBean(SetterInjectedController.class).sayHello());
