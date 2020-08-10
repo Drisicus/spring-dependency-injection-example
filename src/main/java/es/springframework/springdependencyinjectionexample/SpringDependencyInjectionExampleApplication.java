@@ -22,8 +22,9 @@ public class SpringDependencyInjectionExampleApplication {
         // Use bean methods
         System.out.println(controller.hello());
 
-        System.out.println(context.getBean(PropertyInjectedController.class).sayHello());
-        System.out.println(context.getBean(SetterInjectedController.class).sayHello());
-        System.out.println(context.getBean(ConstructorInjectedController.class).sayHello());
+        // Example calls using controllers directly
+//        System.out.println(context.getBean(PropertyInjectedController.class).sayHello());
+//        System.out.println(context.getBean(SetterInjectedController.class).sayHello());
+//        System.out.println(context.getBean(ConstructorInjectedController.class).sayHello());
     }
 }
