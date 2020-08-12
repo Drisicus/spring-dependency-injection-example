@@ -4,6 +4,7 @@ import es.springframework.springdependencyinjectionexample.controllers.Construct
 import es.springframework.springdependencyinjectionexample.controllers.MyController;
 import es.springframework.springdependencyinjectionexample.controllers.PropertyInjectedController;
 import es.springframework.springdependencyinjectionexample.controllers.SetterInjectedController;
+import es.springframework.springdependencyinjectionexample.exampleBeans.FakeBroker;
 import es.springframework.springdependencyinjectionexample.exampleBeans.FakeDataSource;
 
 import org.springframework.boot.SpringApplication;
@@ -26,5 +27,11 @@ public class SpringDependencyInjectionExampleApplication {
         System.out.println(fakeDataSource.getUser());
         System.out.println(fakeDataSource.getPassword());
         System.out.println(fakeDataSource.getUrl());
+
+        FakeBroker fakeBroker = context.getBean(FakeBroker.class);
+        System.out.println(fakeBroker.getUser());
+        System.out.println(fakeBroker.getPassword());
+        System.out.println(fakeBroker.getUrl());
+
     }
 }
