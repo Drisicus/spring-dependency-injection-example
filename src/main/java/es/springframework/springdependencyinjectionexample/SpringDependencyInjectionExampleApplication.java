@@ -1,15 +1,11 @@
 package es.springframework.springdependencyinjectionexample;
 
-import es.springframework.springdependencyinjectionexample.controllers.ConstructorInjectedController;
-import es.springframework.springdependencyinjectionexample.controllers.MyController;
-import es.springframework.springdependencyinjectionexample.controllers.PropertyInjectedController;
-import es.springframework.springdependencyinjectionexample.controllers.SetterInjectedController;
-import es.springframework.springdependencyinjectionexample.exampleBeans.FakeBroker;
-import es.springframework.springdependencyinjectionexample.exampleBeans.FakeDataSource;
-
 import org.springframework.boot.SpringApplication;
 import org.springframework.boot.autoconfigure.SpringBootApplication;
 import org.springframework.context.ApplicationContext;
+
+import es.springframework.springdependencyinjectionexample.controllers.MyController;
+import es.springframework.springdependencyinjectionexample.exampleBeans.FakeDataSource;
 
 @SpringBootApplication
 public class SpringDependencyInjectionExampleApplication {
@@ -27,11 +23,5 @@ public class SpringDependencyInjectionExampleApplication {
         System.out.println(fakeDataSource.getUser());
         System.out.println(fakeDataSource.getPassword());
         System.out.println(fakeDataSource.getUrl());
-
-        FakeBroker fakeBroker = context.getBean(FakeBroker.class);
-        System.out.println(fakeBroker.getUser());
-        System.out.println(fakeBroker.getPassword());
-        System.out.println(fakeBroker.getUrl());
-
     }
 }
