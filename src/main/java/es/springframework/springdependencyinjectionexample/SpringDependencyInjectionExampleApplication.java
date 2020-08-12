@@ -4,6 +4,8 @@ import es.springframework.springdependencyinjectionexample.controllers.Construct
 import es.springframework.springdependencyinjectionexample.controllers.MyController;
 import es.springframework.springdependencyinjectionexample.controllers.PropertyInjectedController;
 import es.springframework.springdependencyinjectionexample.controllers.SetterInjectedController;
+import es.springframework.springdependencyinjectionexample.exampleBeans.FakeDataSource;
+
 import org.springframework.boot.SpringApplication;
 import org.springframework.boot.autoconfigure.SpringBootApplication;
 import org.springframework.context.ApplicationContext;
@@ -19,12 +21,8 @@ public class SpringDependencyInjectionExampleApplication {
         // Get the bean from context. Spring converts the bean to lower case the first letter, so MyController --> myController
         MyController controller = (MyController) context.getBean("myController");
 
-        // Use bean methods
-        System.out.println(controller.hello());
-
-        // Example calls using controllers directly
-//        System.out.println(context.getBean(PropertyInjectedController.class).sayHello());
-//        System.out.println(context.getBean(SetterInjectedController.class).sayHello());
-//        System.out.println(context.getBean(ConstructorInjectedController.class).sayHello());
+        // Relevant files: exampleBeans/FakeDataSource, config/PropertyConfig, resources/datasource.properties
+        FakeDataSource fakeDataSource = context.getBean(FakeDataSource.class);
+        System.out.println(fakeDataSource.getUser());
     }
 }
