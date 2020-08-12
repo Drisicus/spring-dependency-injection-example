@@ -1,6 +1,5 @@
 package es.springframework.springdependencyinjectionexample.services;
 
-
 public class PrimaryGermanGreetingsService implements GreetingService{
 
     private GreetingsRepository greetingsRepository;
