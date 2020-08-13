@@ -1,0 +1,14 @@
+data:
+  user: Bob
+  password: 12345
+  url: mydburl
+
+---
+
+spring:
+  profiles: de
+
+data:
+  user: Uncle Axel
+  password: 1928376
+  url: myGermanURL
