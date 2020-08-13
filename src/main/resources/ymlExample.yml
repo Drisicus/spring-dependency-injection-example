@@ -1,0 +1,17 @@
+name: Zomb
+names:
+  - Alice
+  - Bobe
+  - Cool
+
+pound_sign: "#"
+
+book:
+  author: Jean
+  publisher: JPublish
+
+true_statement: true
+false_statement: false
+
+string_val: "Some string val"
+
